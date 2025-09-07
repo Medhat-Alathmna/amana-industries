@@ -135,7 +135,7 @@ export default function FactoryMap({ factories }: FactoryMapProps) {
                   <div>
                     <span className="font-medium text-gray-600">Specialization:</span>
                     <div className="mt-1 flex flex-wrap gap-1">
-                      {factory.specialization.map((spec, index) => (
+                      {factory.specialization.map((spec:any, index:any) => (
                         <span 
                           key={index}
                           className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
