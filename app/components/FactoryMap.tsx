@@ -54,7 +54,7 @@ interface Factory {
 }
 
 interface FactoryMapProps {
-  factories: Factory[];
+  factories: Factory[]|any[];
 }
 
 export default function FactoryMap({ factories }: FactoryMapProps) {

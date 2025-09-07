@@ -42,8 +42,8 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchFactories = async () => {
       try {
-       const factoryData = await import('./data/factories.json');
-setFactories(factoryData.factory_data);
+        const factoryData = await import('./data/factories.json');
+        setFactories(factoryData.factory_data);
       } catch (err) {
         console.error('Error loading factory data:', err);
         setError('Failed to load factory data');
@@ -122,8 +122,7 @@ setFactories(factoryData.factory_data);
           </div>
         )}
         {!loading && !error && factories.length > 0 && (
-          <FactoryMap factories={factories} />
-        )}
+          <FactoryMap factories={factories} />)}
       </div>
 
       {/* Monthly Performance - One Chart */}
