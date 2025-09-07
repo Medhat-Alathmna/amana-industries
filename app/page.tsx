@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+import Dashboard from './components/dashboard';
 
 // Dynamically import the Map component to avoid SSR issues with Leaflet
 const FactoryMap = dynamic(() => import('./components/FactoryMap'), {
@@ -135,9 +136,12 @@ export default function Home() {
           </div>
         )}
         
-        {!loading && factories.length > 0 && (
-          <FactoryMap factories={factories} />
-        )}
+   {!loading && factories.length > 0 && (
+  <>
+    <FactoryMap factories={factories} />
+    <Dashboard />
+  </>
+)}
       </div>
 
       {/* Footer */}
